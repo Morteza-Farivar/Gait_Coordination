@@ -1,5 +1,13 @@
 %% Step 7: Compute CRP and CRP Variability for All Gait Cycles
 
+% Continuous Relative Phase (CRP) is a nonlinear metric that quantifies the 
+% dynamic coordination between two oscillating segments across the gait cycle. 
+% CRP Variability reflects the consistency of this coordination across repeated 
+% cycles, offering insight into neuromechanical control strategies. 
+% The method applied here follows the approach described by Lamb & Stöckl (2014).
+% Lamb, P. F., & Stöckl, M. (2014). On the use of continuous relative phase: Review of current approaches and outline for a new standard. Clinical Biomechanics, 29(5), 484-493.
+
+
 % Validate inputs
 if ~exist('phase_angles', 'var') || isempty(phase_angles)
     error('Phase angles are missing. Ensure Step 7 runs successfully before Step 8.');
@@ -91,5 +99,6 @@ disp('CRP and Variability computation completed.');
 % Save CRP data and variability to Workspace
 assignin('base', 'crp_all', crp_all);
 assignin('base', 'crp_variability', crp_variability);
+
 
 disp('Step 7 completed: CRP and Variability data saved successfully.');
