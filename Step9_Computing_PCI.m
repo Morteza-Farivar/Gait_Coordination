@@ -1,6 +1,14 @@
+% The Phase Coordination Index (PCI) is a measure of bilateral stepping coordination. 
+% It combines both the accuracy and the consistency of the temporal relationship 
+% between heel-strike events of the two legs, making it a robust indicator of gait 
+% coordination. The calculation method is based on the approach introduced by 
+% Plotnik et al. (2007).
+% Plotnik, M., Giladi, N., & Hausdorff, J. M. (2007). A new measure for quantifying the bilateral coordination of human gait: effects of aging and Parkinson’s disease. Experimental brain research, 181(4), 561-570.
+
+
 function [PHI, PHI_ABS, PHI_CV, PCI] = step9_compute_pci_single_leg( ...
     stride_time_right, stride_time_left, step_time_right, step_time_left, ref_leg)
-% STEP10B_COMPUTE_PCI_SINGLE_LEG
+% STEP9_COMPUTE_PCI_SINGLE_LEG
 % Compute phase (PHI), PHI_ABS, PHI_CV, and PCI for a single reference leg.
 %
 % INPUTS:
@@ -94,3 +102,4 @@ function [PHI, PHI_ABS, PHI_CV, PCI] = step9_compute_pci_single_leg( ...
 
     disp('Single-leg PHI and PCI computations completed.');
 end
+
